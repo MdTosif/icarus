@@ -1,0 +1,33 @@
+myproject/
+├── cmd/
+│   └── myapp/
+│       └── main.go              // wires up CLI via Cobra
+│
+├── internal/
+│   ├── config/
+│   │   └── config.go            // Load() → *Config
+│   │
+│   ├── api/
+│   │   ├── routes.go            // NewRouter(cfg *Config) http.Handler
+│   │   └── handlers.go          // HTTP handler functions
+│   │
+│   ├── service/
+│   │   └── service.go           // core business logic / DB access
+│   │
+│   └── cli/
+│       ├── commands.go          // “serve” command + any others
+│       └── flags.go             // global flag registration (optional)
+│
+├── pkg/
+│   └── utils/
+│       └── logging.go           // reusable helpers (e.g. logger setup)
+│
+├── configs/
+│   └── config.example.yaml      // sample config file for users
+│
+├── scripts/
+│   └── build.sh                 # builds “myapp” binary and/or Docker image
+│
+├── go.mod
+├── go.sum
+└── README.md
