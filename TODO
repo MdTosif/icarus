@@ -1,3 +1,2 @@
-Add the precalculation of the nonce
-sending transaction paralal go routine for each wallet
-Add Flags
+send balance from root wallet to all wallets
+precalculate the amount it is gonna use, and exit if its greater than current balance
